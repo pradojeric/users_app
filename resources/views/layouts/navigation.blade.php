@@ -82,6 +82,7 @@
                             </x-dropdown-link>
 
                         @endcan
+                        <x-dropdown-link :href="route('change.password')">{{ __('Change Password') }}</x-dropdown-link>
                         <hr>
                         <!-- Authentication -->
                         <form method="POST" action="{{ route('logout') }}">

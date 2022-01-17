@@ -8,6 +8,7 @@
             <div>
                 <x-label for="department_id">Department</x-label>
                 <select name="" id="department_id" wire:model="department_id" class="w-full rounded border border-gray-300 shadow-sm">
+                    <option value="" selected>Choose...</option>
                     @foreach ($departments as $department)
                         <option value="{{ $department->id }}">{{ $department->name }}</option>
                     @endforeach

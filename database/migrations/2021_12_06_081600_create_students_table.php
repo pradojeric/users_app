@@ -30,7 +30,7 @@ class CreateStudentsTable extends Migration
             $table->integer('current_year');
             $table->string('school_year');
             $table->integer('term');
-            $table->string('previous_school');
+            $table->string('previous_school')->nullable();
             $table->timestamps();
         });
     }

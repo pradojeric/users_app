@@ -57,7 +57,7 @@ class CreateStaff extends Component
         'empPos' => 'required',
         'empTenureship' => 'nullable',
         'selectedCollege' => 'nullable',
-        'office' => 'nullable',
+        'selectedOffice' => 'nullable',
     ];
 
     public function mount($staffId = null)
@@ -103,6 +103,8 @@ class CreateStaff extends Component
 
     public function store()
     {
+        $this->validate();
+
         DB::transaction(function () {
             if($this->existingStaff)
             {

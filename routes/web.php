@@ -14,6 +14,7 @@ use App\Http\Livewire\Students\Registration;
 use App\Http\Livewire\Students\StudentIndex;
 use App\Http\Livewire\Position\PositionIndex;
 use App\Http\Livewire\Department\DepartmentIndex;
+use App\Http\Livewire\Students\ChangePassword;
 use App\Http\Livewire\Tenureship\TenureshipIndex;
 
 /*
@@ -36,6 +37,8 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/dashboard', function(){
         return view('students.dashboard');
     })->name('dashboard');
+
+    Route::get('/change-password', ChangePassword::class)->name('change.password');
 
     Route::middleware(['role:superadmin'])->group(function(){
         Route::get('/admin/dashboard', TokenIndex::class)->name('admin.dashboard');

@@ -13,7 +13,7 @@ class CourseModal extends ModalComponent
     public $code;
     public $department_id;
     public $majors = [];
-    public $course;
+    public $course = '';
 
     protected $rules = [
         'name' => 'required',

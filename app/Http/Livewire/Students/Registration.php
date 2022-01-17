@@ -130,7 +130,6 @@ class Registration extends Component
         {
             $this->student = Student::whereStudentId($this->student_id)->first();
 
-
             if(!$this->student)
             {
                 $this->addError('no_student', 'Student ID is not found in the database!');
