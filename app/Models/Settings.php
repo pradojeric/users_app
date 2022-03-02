@@ -41,4 +41,9 @@ class Settings extends Model
 
         return "{$this->getRawOriginal('school_year')}, {$term}";
     }
+
+    public static function getSettings()
+    {
+        return self::first();
+    }
 }

@@ -23,7 +23,7 @@ class CreateStudentsTable extends Migration
             $table->string('last_name');
             $table->string('name_ext')->nullable();
             $table->string('student_status');
-            $table->string('enrollment_status')->nullable();
+            $table->string('enrollment_status')->default('admitted');
             $table->string('student_id')->nullable();
             $table->string('temp_id')->nullable();
             $table->string('course_program')->nullable();

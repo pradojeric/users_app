@@ -31,6 +31,6 @@ class StepController extends Controller
     public function getFaculties(Request $request)
     {
         // return new EmployeeCollection(Employee::all());
-        return EmployeeResource::collection(Employee::with(['user', 'college', 'office'])->get());
+        return EmployeeResource::collection(Employee::with(['user', 'college', 'office', 'position'])->get());
     }
 }

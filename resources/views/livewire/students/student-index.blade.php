@@ -42,6 +42,9 @@
                                 <th class="uppercase text-gray-700 tracking-tight text-sm py-2">Course</th>
                                 <th class="uppercase text-gray-700 tracking-tight text-sm py-2">Year</th>
                                 <th class="uppercase text-gray-700 tracking-tight text-sm py-2">Enrollment Status</th>
+                                @if($show == 'all')
+                                    <th class="uppercase text-gray-700 tracking-tight text-sm py-2">Date Updated</th>
+                                @endif
                                 <th class="uppercase text-gray-700 tracking-tight text-sm py-2">Action</th>
                             </tr>
                         </thead>
@@ -69,6 +72,11 @@
                                     <td class="px-6 py-2 text-center uppercase text-xs">
                                         {{ $student->enrollment_status }}
                                     </td>
+                                    @if($show == 'all')
+                                        <td class="px-6 py-2 text-center uppercase text-xs">
+                                            {{ $student->updated_at->format('Y-m-d') }}
+                                        </td>
+                                    @endif
                                     <td class="px-6 py-2 text-center">
                                         <div class="flex flex-col space-y-1">
                                             <button type="button"

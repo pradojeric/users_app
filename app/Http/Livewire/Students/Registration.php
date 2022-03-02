@@ -232,6 +232,7 @@ class Registration extends Component
                     'current_year' => $this->current_year,
                     'school_year' => $this->year1 ."-".$this->year2,
                     'term' => $this->term,
+                    'enrollment_status' => 'admitted'
                 ]);
 
                 $student->informable()->create([
